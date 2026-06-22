@@ -1,0 +1,83 @@
+/* Background orbs wrapper — sits behind everything */
+.bg {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 1;
+}
+
+.orb1 {
+  width: 600px;
+  height: 600px;
+  background: var(--orb1);
+  top: -150px;
+  left: -100px;
+  animation: float 18s ease-in-out infinite;
+}
+
+.orb2 {
+  width: 500px;
+  height: 500px;
+  background: var(--orb2);
+  top: 40%;
+  right: -120px;
+  animation: floatB 22s ease-in-out infinite;
+}
+
+.orb3 {
+  width: 400px;
+  height: 400px;
+  background: var(--orb3);
+  bottom: -100px;
+  left: 30%;
+  animation: floatC 16s ease-in-out infinite;
+}
+
+.layout {
+  position: relative;
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.mainContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.pageContainer {
+  flex: 1;
+  overflow-y: auto;
+  padding: 2rem;
+}
+
+@media (max-width: 768px) {
+  .layout {
+    flex-direction: column;
+  }
+  .pageContainer {
+    padding: 1rem;
+  }
+}
+
+/* Mobile overlay when sidebar is open */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(2px);
+  z-index: 9;
+  animation: fadeIn 0.2s ease;
+}
+

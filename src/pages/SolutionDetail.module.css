@@ -1,0 +1,233 @@
+.container {
+  max-width: 820px;
+  margin: 0 auto;
+  padding-bottom: 3rem;
+}
+
+/* Top action bar */
+.actionsBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.75rem;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.backBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-secondary);
+  font-weight: 600;
+  font-size: 0.875rem;
+  transition: color 0.2s;
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--radius-md);
+  background: var(--bg-glass);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--border-color);
+}
+
+.backBtn:hover {
+  color: var(--accent-primary);
+  border-color: var(--accent-primary);
+  background: var(--accent-light);
+  text-decoration: none;
+}
+
+.actionBtns {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+/* Main card */
+.card {
+  background: var(--bg-glass);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg), inset 0 1px 0 rgba(255,255,255,0.12);
+  overflow: hidden;
+}
+
+/* Header */
+.header {
+  padding: 2rem 2.25rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.title {
+  font-size: 1.875rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  margin-bottom: 1.125rem;
+  line-height: 1.2;
+}
+
+.metaTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.625rem;
+  margin-bottom: 1rem;
+}
+
+.metaTag {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  background: rgba(255,255,255,0.05);
+  border: 1px solid var(--border-color);
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.tag {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--accent-primary);
+  background: var(--accent-light);
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+}
+
+/* Content sections */
+.content {
+  padding: 2rem 2.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.section h3 {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-secondary);
+  margin-bottom: 0.75rem;
+  font-family: var(--font-body);
+}
+
+.sectionContent {
+  background: rgba(255,255,255,0.04);
+  padding: 1.375rem 1.5rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-color);
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+.sectionContent pre,
+.sectionContent code {
+  font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+  font-size: 0.875rem;
+  background: rgba(0,0,0,0.12);
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+}
+
+.sectionContent pre {
+  overflow-x: auto;
+  max-width: 100%;
+  padding: 1rem;
+  margin: 0.5rem 0;
+  white-space: pre-wrap;
+}
+
+.sectionContent img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius-md);
+}
+
+.sectionContent p {
+  margin-bottom: 0.75rem;
+}
+.sectionContent p:last-child {
+  margin-bottom: 0;
+}
+
+.sectionContent ul,
+.sectionContent ol {
+  margin-left: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.sectionContent li {
+  margin-bottom: 0.25rem;
+}
+
+.sectionContent h1, 
+.sectionContent h2, 
+.sectionContent h3 {
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+/* Footer stats */
+.statsFooter {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 0;
+  border-top: 1px solid var(--border-color);
+}
+
+.statItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 1.25rem 1.75rem;
+  border-right: 1px solid var(--border-color);
+}
+
+.statItem:last-child {
+  border-right: none;
+}
+
+.statLabel {
+  font-size: 0.68rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  font-weight: 700;
+}
+
+.statValue {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+@media (max-width: 600px) {
+  .header, .content {
+    padding: 1.5rem;
+  }
+  .title {
+    font-size: 1.5rem;
+  }
+  .statsFooter {
+    grid-template-columns: 1fr;
+  }
+  .statItem {
+    border-right: none;
+    border-bottom: 1px solid var(--border-color);
+  }
+  .statItem:last-child {
+    border-bottom: none;
+  }
+}
