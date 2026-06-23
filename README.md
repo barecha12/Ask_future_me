@@ -1,100 +1,75 @@
-# Ask_future_me
+# Ask Future Me
 
-A React + Vite application scaffold with opinionated tooling and developer-friendly scripts to build, run, lint, and test a modern web interface.
+A personal knowledge base application designed to help you document and organize solutions to problems you've encountered, so your future self doesn't have to solve them twice.
 
-> NOTE: Replace the Project overview and Usage sections below with a concise description of what “Ask_future_me” does and who its primary users are.
+## Overview
 
-## Project overview
+Have you ever spent hours debugging an issue, only to face the exact same problem months later and realize you've forgotten the solution? **Ask Future Me** solves this by acting as your personal diary for technical solutions, workarounds, and life hacks.
 
-Ask_future_me is a front-end application built with React and Vite. This repository provides a fast local development experience (HMR), a modern build pipeline, and a baseline ESLint configuration so teams can iterate quickly and maintain code quality.
+## Key Features
 
-Provide a short one- or two-sentence description here about the app’s purpose (for example: "Ask_future_me lets users record messages for their future selves and schedule delivery dates").
+- **Dashboard Insights**: Visualize your problem-solving activity with beautiful charts, statistics, and a summary of your recent solutions.
+- **Rich Solution Logging**: Document problems with comprehensive metadata including:
+  - Title and Symptoms/Context
+  - Detailed Solution
+  - Categories and Tags
+  - Difficulty level and Estimated Time Saved
+  - Confidence Level and Source links
+- **Smart Similarity Detection**: Auto-detects if you're adding a solution that you might have already solved before, preventing duplicate entries.
+- **Search & Filter**: Quickly find past solutions using powerful search queries, tag filtering, and category browsing.
+- **Review Reminders**: Spaced repetition to remind you to review solutions periodically, ensuring the knowledge sticks.
+- **Favorites & Pinning**: Keep your most frequently used or important solutions easily accessible.
 
-## Key features
+## Tech Stack
 
-- Fast development server with Vite and Hot Module Replacement (HMR)
-- React-based UI with compatibility for official Vite React plugins
-- ESLint configuration and recommended scripts for consistency and quality
-- Simple build and preview workflow for production testing
+- **Framework**: React 19 + Vite
+- **Routing**: React Router DOM
+- **Styling**: Vanilla CSS (CSS Modules)
+- **Icons**: Lucide React
+- **Charts**: Recharts
+- **Markdown Rendering**: React Markdown
 
-## Tech stack
+## Getting Started
 
-- React
-- Vite
-- Node.js (npm / Yarn / pnpm)
-- ESLint (extendable to TypeScript + type-aware rules)
+### Prerequisites
 
-## React compiler
+- Node.js (v18 or higher recommended)
+- npm or yarn
 
-The React Compiler is not enabled in this template because it can negatively affect development and build performance in some projects. If you want to enable it, see the official guide:
+### Installation
 
-https://react.dev/learn/react-compiler/installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/ask-future-me.git
+   cd ask-future-me
+   ```
 
-You can also choose between the official Vite React plugins:
-
-- @vitejs/plugin-react — uses Oxc: https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react
-- @vitejs/plugin-react-swc — uses SWC: https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc
-
-Select the plugin that best matches your performance and compatibility requirements.
-
-## Getting started
-
-1. Install dependencies
-
+2. Install dependencies:
+   ```bash
    npm install
+   ```
 
-   or with Yarn:
-
-   yarn install
-
-   or with pnpm:
-
-   pnpm install
-
-2. Run the development server (HMR enabled)
-
+3. Start the development server:
+   ```bash
    npm run dev
+   ```
 
-3. Open the URL printed in the terminal (typically http://localhost:5173).
+4. Open your browser and navigate to `http://localhost:5173`.
 
-## Available scripts
+### Build for Production
 
-Typical npm scripts you may find in package.json (adjust to your project):
+To create a production-ready build:
 
-- npm run dev — start the dev server with HMR
-- npm run build — produce a production build in `dist/`
-- npm run preview — preview the production build locally
-- npm run lint — run ESLint
-- npm run format — format code (if configured with Prettier)
-- npm run test — run the test suite
+```bash
+npm run build
+```
 
-## ESLint and TypeScript
+This will generate a `dist` folder containing the compiled assets.
 
-This project includes a basic ESLint setup. For production apps we recommend using TypeScript and enabling type-aware rules (ESLint + TypeScript parser + types plugin). See the Vite TypeScript starter for reference:
+## Contributing
 
-https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts
-
-## Development and contribution guidelines
-
-- Create a feature branch for each change: `git checkout -b feat/your-feature`
-- Keep commits focused and write clear commit messages
-- Open a pull request describing the change and any implementation details
-- Add or update tests for new functionality and run linting before submitting
-
-## Deployment
-
-Build the app with `npm run build` and deploy the `dist/` directory to any static host (Vercel, Netlify, GitHub Pages, S3 + CloudFront, etc.). Configure environment variables and routing on your host as needed.
-
-## Useful links
-
-- Vite: https://vitejs.dev/
-- React: https://react.dev/
-- ESLint: https://eslint.org/
+Contributions are welcome! Feel free to open an issue or submit a pull request if you have ideas for improvements or new features.
 
 ## License
 
-Add a LICENSE file to specify the project license (e.g., MIT, Apache-2.0). If you already have a license, remove this note.
-
-## Contact
-
-If you'd like contributions or feedback, list maintainers or preferred channels (GitHub issues, discussions, or email).
+This project is licensed under the MIT License.
